@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.art-objects-list{
+    display: flex;
+    justify-content: space-between; 
+
+    li{
+        list-style-type: none;
+        flex: 1;
+    }
+}
+
+.art-object-item img {
+    max-height: 500px;
+    max-width: 500px;
+    width: calc(100px + (400 - 100) * random()); 
+    height: calc(100px + (400 - 100) * random()); 
+}

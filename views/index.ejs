@@ -1,11 +1,11 @@
 <%- include('partials/head') %>
-<h1>Art Objects</h1>
-    <ul>
-        <% data.forEach(item => { %>
-            <li>
-                <h2><%= item.title %></h2>
-                <p>ID: <%= item.id %></p>
-                <img src="<%= item.image %>" alt="<%= item.title %>">
-            </li>
-        <% }) %>
-    </ul>
+<h1 class="art-objects-title">Art Objects</h1>
+<ul class="art-objects-list">
+    <% data.forEach(item => { %>
+        <li class="art-object-item">
+            <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=avif" type="image/avif">
+            <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=webp" type="image/webp">
+            <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %> <%= item.id %>" loading="lazy">
+        </li>
+    <% }) %>
+</ul>
