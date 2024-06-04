@@ -11,12 +11,18 @@ app.set('port', process.env.PORT || 8009)
 
 const apiUrl = 'https://fdnd-agency.directus.app/items/fabrique_art_objects'
 
+function getRandomSize(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // Data ophalen bij opstart en filteren
 const data = await fetchJson(apiUrl)
 const filteredData = data.data.map(item => ({
     id: item.id,
     title: item.title,
-    image: item.image
+    image: item.image,
+    width: getRandomSize(200, 500), 
+    height: getRandomSize(200, 500) 
 }))
 
 app.get('/', function (request, response) {
