@@ -21,8 +21,8 @@ const filteredData = data.data.map(item => ({
     id: item.id,
     title: item.title,
     image: item.image,
-    width: getRandomSize(220, 250), 
-    height: getRandomSize(220, 250) 
+    width: getRandomSize(250, 300), 
+    height: getRandomSize(200, 230) 
 }))
 
 app.get('/', function (request, response) {
