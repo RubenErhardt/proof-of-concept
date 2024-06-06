@@ -1,12 +1,16 @@
 <%- include('partials/head') %>
 <h1 class="art-objects-title"></h1>
-<ul class="art-objects-list">
+<ul class="art-objects-list" id="art-objects-list">
     <% data.forEach(item => { %>
         <li class="art-object-item">
-            <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=avif" type="image/avif">
-            <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=webp" type="image/webp">
-            <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %>" width="<%= item.width %>" height="<%= item.height %>">
+            <picture>
+                <!-- <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=avif" type="image/avif">
+                <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=webp"> -->
+                <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %>" width="<%= item.width %>" height="<%= item.height %>">
+            </picture>
         </li>
     <% }) %>
 </ul>
+
+<button id="load-more">Load more</button>
 
