@@ -1,18 +1,25 @@
 <%- include('partials/head') %>
 
 <h1 class="art-objects-title"></h1>
-<ul class="art-objects-list" id="art-objects-list">
+<ul id="art-objects-list" class="art-objects-list">
     <% data.forEach(item => { %>
-        <li class="art-object-item">
-            <picture>
-                <!-- <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=avif" type="image/avif">
-                <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=webp"> -->
-                <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %>" width="<%= item.width %>" height="<%= item.height %>">
-            </picture>
-        </li>
+      <li class="art-object-item">
+        <picture>
+          <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %>" width="<%= item.width %>" height="<%= item.height %>">
+        </picture>
+      </li>
     <% }) %>
-</ul>
+  </ul>
+  <section class="button-search-section">
+    <button>ALL</button>
+    <button>POTTERY</button>
+    <button>GLASS</button>
+    <button>POTTERY</button>
+    <button>GLASS</button>
+    <form class="search-form">
+        <input type="text" name="query" placeholder="SEARCH THE COLLECTION.....">
+      </form>
+</section>
 
-
-<button id="load-more">Load more</button>
+  
 
