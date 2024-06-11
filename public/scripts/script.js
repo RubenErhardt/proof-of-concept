@@ -9,13 +9,14 @@ function loadMoreItems() {
   }
   
   function handleScroll() {
-    const scrollableHeight = document.documentElement.scrollHeight;
-    const currentScroll = window.scrollY + window.innerHeight;
+    const scrollableWidth = document.documentElement.scrollWidth;
+    const currentScroll = window.scrollX + window.innerWidth;
     
-    if (currentScroll >= scrollableHeight - 100) { 
+    if (currentScroll >= scrollableWidth - 100) { 
       loadMoreItems();
     }
   }
-  
   window.addEventListener('scroll', handleScroll);
+
+  
   

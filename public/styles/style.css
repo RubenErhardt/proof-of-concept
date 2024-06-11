@@ -3,10 +3,12 @@
     margin: 0;
     padding: 0;
   }
+
   
   body::-webkit-scrollbar {
     width: 0px;
   }
+
   
   .art-objects-list {
     display: flex;
@@ -79,9 +81,7 @@
     margin-right: 15px;
   }
   
-  li:hover {
-    cursor: pointer;
-  }
+
   
   .logo img {
     width: 100px;
