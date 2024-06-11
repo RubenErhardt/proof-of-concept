@@ -9,6 +9,7 @@
     justify-content: space-between; 
     gap: 20px;
     padding: 20px;
+    flex-wrap: wrap;
 
     li{
         list-style-type: none;
@@ -19,4 +20,53 @@
 .art-object-item img {
     width: calc(100px + (400 - 100) * random()); 
     height: calc(100px + (400 - 100) * random()); 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.2em;
+    direction: rtl;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    margin-right: 15px;
+    direction: rtl;
+}
+
+button {
+    margin-right: 15px;
+}
+
+li:hover{
+    cursor: pointer;
+}
+
+
+.logo img{
+    width: 100px;
+    height: 100xp;
 }
