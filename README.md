@@ -12,19 +12,29 @@ Het doel van dit project is dat we een website maken, die dient als infinite can
   * [Licentie](#licentie)
 
 ## Beschrijving
-Voor Fabrique heb ik een infinite canvas ontworpen. 
+Voor Fabrique heb ik een infinite canvas ontworpen. De gebruiker kan alle kanten op bewegen en zo verschillende schilderijen zien van Qatar Museums. 
 
 ![Screenshot 2024-06-18 154114](https://github.com/RubenErhardt/proof-of-concept/assets/144007147/ef39d3a3-84e6-485c-94ac-09c769f98a38)
 
 https://infinite-canvas-tz8y.onrender.com
 
 
-
 ## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+Als museumbezoeker wil ik interactief door een virtueel museum kunnen navigeren, zodat ik op een boeiende manier meer te weten kan komen over verschillende kunstwerken en tentoonstellingen.
+- Navigatie: Gebruikers kunnen vrij in alle richtingen door het canvas scrollen om verschillende kunstwerken en tentoonstellingen te bekijken.
+- Interactie: Gebruikers kunnen inzoomen op kunstwerken voor gedetailleerde weergaven.
+- Toegankelijkheid: Het canvas werkt soepel op verschillende apparaten, inclusief desktops, tablets, en smartphones.
+
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+1. EJS Templating
+2. CSS
+3. NODE JS
+4. SERVER SIDE / CLIENT SIDE JS
+5. DIRECTUS API
+   
+
+
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
