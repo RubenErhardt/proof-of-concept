@@ -15,7 +15,6 @@
    align-items: center;
    flex-wrap: wrap;
    gap: 5px;
-   position: relative;
     padding: 10px;
     list-style-type: none;
   }
@@ -132,9 +131,4 @@
     font-weight: bold;
     color: rgb(71, 71, 71);
   }
-  
-  @media screen and (max-width:770px) {
-    picture img{
-      width: 230px;
-    }
-  }
+ 
