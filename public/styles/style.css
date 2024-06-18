@@ -1,134 +1,136 @@
+/* Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  
-  body::-webkit-scrollbar {
-    width: 0px;
-  }
+/* Custom scrollbar styling */
+body::-webkit-scrollbar {
+  width: 0px;
+}
 
-  
-  .art-objects-list {
-    display: flex;
-   align-items: center;
-   flex-wrap: wrap;
-   gap: 5px;
-    padding: 10px;
-    list-style-type: none;
-  }
-  
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    border-bottom: 1px solid black;
-  }
-  
-  header li {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  
-  header button {
-    background-color: yellow;
-    color: black;
-    width: 80px;
-    height: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  header button:hover {
-    background-color: black;
-    color: white;
-    transition: ease-in-out 1s;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  .logo h1 {
-    margin: 0;
-    font-size: 1.2em;
-  }
-  
-  ul {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  ul li {
-    margin-right: 15px;
-    margin-top: 3px;
-  }
-  
-  button {
-    margin-right: 15px;
-  }
-  
+/* Container styling */
+.art-container {
+  display: flex;
+}
 
-  
-  .logo img {
-    width: 100px;
-    height: auto;
-  }
-  
-  .button-search-section {
-    position: fixed;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .button-search-section button {
-    background-color: #505050;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .button-search-section button:hover {
-    background-color: #0056b3;
-  }
-  
-  .search-form {
-    width: 700px;
-    height: 50px;
-    background-color: #f0f0f0; 
-    padding: 10px 20px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    outline: 1px solid black;
-  }
-  
-  .search-form input[type="text"] {
-    width: 100%;
-    border: none; 
-    background: none; 
-    outline: none; 
-    font-size: 16px; 
-  }
-  
-  .search-form input[type="text"]::placeholder {
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(71, 71, 71);
-  }
- 
+/* List styling */
+.art-objects-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+/* Button and search section styling */
+.button-search-section {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-search-section button {
+  background-color: #505050;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 5px;
+}
+
+.button-search-section button:hover {
+  background-color: #0056b3;
+}
+
+.search-form {
+  width: 700px;
+  height: 50px;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  outline: 1px solid black;
+}
+
+.search-form input[type="text"] {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-form input[type="text"]::placeholder {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(71, 71, 71);
+}
+
+/* Additional styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+header li {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+header button {
+  background-color: yellow;
+  color: black;
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header button:hover {
+  background-color: black;
+  color: white;
+  transition: ease-in-out 1s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul li {
+  margin-right: 15px;
+  margin-top: 3px;
+}
+
+button {
+  margin-right: 15px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}

@@ -1,7 +1,8 @@
 <%- include('partials/head') %>
 
 <h1 class="art-objects-title"></h1>
-<ul id="art-objects-list" class="art-objects-list">
+<div class="art-container">
+  <ul id="art-objects-list" class="art-objects-list">
     <% data.forEach(item => { %>
       <li class="art-object-item">
         <picture>
@@ -10,15 +11,18 @@
       </li>
     <% }) %>
   </ul>
-  <section class="button-search-section">
-    <button>ALL</button>
-    <button>POTTERY</button>
-    <button>GLASS</button>
-    <button>POTTERY</button>
-    <button>GLASS</button>
-    <form class="search-form">
-        <input type="text" name="query" placeholder="SEARCH THE COLLECTION.....">
-      </form>
+</div>
+  
+<section class="button-search-section">
+  <button>ALL</button>
+  <button>POTTERY</button>
+  <button>GLASS</button>
+  <button>POTTERY</button>
+  <button>GLASS</button>
+  <form class="search-form">
+    <input type="text" name="query" placeholder="SEARCH THE COLLECTION.....">
+  </form>
 </section>
+
   
 
