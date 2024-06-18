@@ -1,4 +1,3 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Infinite Canvas 
 Het doel van dit project is dat we een website maken, die dient als infinite canvas. De gebruiker moet alle kanten van het canvas opkunnen, en dit moet infinite zijn. De bedoeling is dat we node en ejs gebruiken gecombineerd met de API van Directus, zodat we een dynamische webpagina hebben. Verder moet de pagina responsive zijn. 
