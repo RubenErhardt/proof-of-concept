@@ -33,13 +33,22 @@ Als museumbezoeker wil ik interactief door een virtueel museum kunnen navigeren,
 4. SERVER SIDE / CLIENT SIDE JS
 5. DIRECTUS API
    
-
-
-
 ## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+1. Clone de code op je locale machine. Klik op de groene knop "code" en clone het of download zip.
+2. Als je node hebt open je de terminal. Boven aan vind je de terminal button of klik ctrl + `
+3. Type npm install om alle packages te downloaden om de server te kunnen starten.
+4. Type npm start
+5. Wil je de server sluiten doe dan dit in de terminal ctrl + c.
+
+### Wil je bijdragen aan dit project? 
+1. Fork de repository
+2. Maak een feature branch (git checkout -b feature/naam-van-je-feature)
+3. Commit je wijzigingen (git commit -m 'Voeg een nieuwe feature toe')
+4. Push naar de branch (git push origin feature/naam-van-je-feature)
+5. Open een Pull Request
 
 ## Bronnen
+Link van mijn website: https://infinite-canvas-tz8y.onrender.com/
 
 ## Licentie
 
