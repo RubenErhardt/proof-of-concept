@@ -1,4 +1,4 @@
-const itemsToClone = 10;
+const itemsToClone = 20;
 let totalClonedItemsVertical = 0;
 let totalClonedItemsHorizontal = 0;
 
@@ -21,19 +21,16 @@ function handleScroll() {
   const scrollableHeight = container.scrollHeight;
   const currentScrollY = container.scrollTop + container.clientHeight;
 
-  // Load more items vertically when scrolling down
   if (currentScrollY >= scrollableHeight - container.clientHeight) {
     loadMoreItems('vertical');
   }
 }
 
-// Initial loading of images and setting random row spans
 document.querySelectorAll('.art-object-item').forEach(item => {
   const rowSpan = Math.floor(Math.random() * 5) + 5;
   item.style.setProperty('--row-span', rowSpan);
 });
 
-// Initial clone to fill the container for scrolling
 loadMoreItems('vertical');
 
 // Event listeners for scroll events
