@@ -10,19 +10,35 @@ body::-webkit-scrollbar {
   width: 0px;
 }
 
-/* Container styling */
-.art-container {
-  display: flex;
-}
-
-/* List styling */
+/* Grid styling */
 .art-objects-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Ensure images fit nicely */
+  grid-auto-rows: 10px; /* Set baseline row height */
+  gap: 10px;
   padding: 10px;
   list-style-type: none;
+  margin: 0 auto; /* Center container */
+}
+
+.art-object-item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: span var(--row-span, 1); /* Use custom property for span */
+}
+
+.art-object-item picture {
+  width: 100%;
+  height: 100%;
+}
+
+.art-object-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
 /* Button and search section styling */
@@ -122,8 +138,7 @@ ul {
 }
 
 ul li {
-  margin-right: 15px;
-  margin-top: 3px;
+  margin-right: 10px;
 }
 
 button {
@@ -133,4 +148,11 @@ button {
 .logo img {
   width: 100px;
   height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .art-objects-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }

@@ -25,5 +25,10 @@ function handleScroll() {
   }
 }
 
+document.querySelectorAll('.art-object-item').forEach(item => {
+  const rowSpan = Math.floor(Math.random() * 10) + 10;
+  item.style.setProperty('--row-span', rowSpan);
+});
+
 window.addEventListener('scroll', handleScroll);
 
