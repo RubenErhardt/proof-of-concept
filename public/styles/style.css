@@ -242,12 +242,12 @@ button {
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
-  margin-right: 20px; /* Ruimte tussen de knoppen aan de rechterkant */
+  margin-right: 20px; 
 }
 
 .nav-bar li:last-child,
 .nav-bar button:last-child {
-  margin-right: 0; /* Geen margin aan de rechterkant voor het laatste item */
+  margin-right: 0; 
 }
 
 .nav-bar li span {
@@ -257,16 +257,16 @@ button {
 
 @media (max-width: 899px) {
   .nav-bar li {
-    display: none; /* Verberg alle li-items in de nav-bar */
+    display: none; 
   }
 
   .nav-bar {
-    flex: 1; /* Geef de nav-bar sectie alle beschikbare ruimte om te centreren */
-    text-align: center; /* Center de inhoud binnen de nav-bar sectie */
+    flex: 1; 
+    text-align: center;
   }
 
   .nav-bar button {
-    margin-right: 0; /* Geen margin aan de rechterkant voor knoppen in de nav-bar */
+    margin-right: 0; 
   }
 }
 
@@ -291,17 +291,25 @@ button {
 
 @media (max-width: 699px) {
   .button-search-section {
-    flex-direction: column; /* Plaats de items onder elkaar */
-    align-items: center; /* Centreer de items verticaal */
-    text-align: center; /* Centreer de tekst binnen de items */
+    align-items: center; 
+    text-align: center;
+  }
+
+  .button-search-section button {
+    width: 50px;
+    font-size: 10px; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
   }
 
   .search-form {
-    margin-top: 10px; /* Voeg wat ruimte toe boven het zoekformulier */
+    margin-top: 10px; 
   }
 
   .search-form input[type="text"] {
-    width: 100%; /* Neem de volledige breedte van de container in */
-    max-width: 300px; /* Beperk de maximale breedte van het zoekveld */
+    width: 100%; 
+    max-width: 300px; 
   }
 }
+
