@@ -12,9 +12,6 @@ function loadMoreItems(direction) {
     if (direction === 'vertical') {
       list.appendChild(item);
       totalClonedItemsVertical++;
-    } else if (direction === 'horizontal') {
-      list.appendChild(item);
-      totalClonedItemsHorizontal++;
     }
   }
 }
@@ -23,24 +20,13 @@ function handleScroll() {
   const container = document.querySelector('.container');
   const scrollableHeight = container.scrollHeight;
   const currentScrollY = container.scrollTop + container.clientHeight;
-  const scrollableWidth = container.scrollWidth;
-  const currentScrollX = container.scrollLeft + container.clientWidth;
 
   // Load more items vertically when scrolling down
   if (currentScrollY >= scrollableHeight - container.clientHeight) {
     loadMoreItems('vertical');
   }
-
-  // Load more items horizontally when scrolling right
-  if (currentScrollX >= scrollableWidth - container.clientWidth) {
-    loadMoreItems('horizontal');
-  }
-
-  // Load more items horizontally when scrolling left
-  if (container.scrollLeft <= 0) {
-    loadMoreItems('horizontal');
-  }
 }
+
 // Initial loading of images and setting random row spans
 document.querySelectorAll('.art-object-item').forEach(item => {
   const rowSpan = Math.floor(Math.random() * 5) + 5;
@@ -49,7 +35,6 @@ document.querySelectorAll('.art-object-item').forEach(item => {
 
 // Initial clone to fill the container for scrolling
 loadMoreItems('vertical');
-loadMoreItems('horizontal');
 
 // Event listeners for scroll events
 document.querySelector('.container').addEventListener('scroll', handleScroll);
