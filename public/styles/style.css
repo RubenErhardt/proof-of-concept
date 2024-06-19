@@ -30,15 +30,19 @@ body {
   height: 100vh;
 }
 
-/* Grid styling */
 .art-objects-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
   padding: 10px;
-  width: 500vw; 
+  width: 100vw; 
   list-style-type: none;
   margin: 0 auto; /* Center container */
+}
+
+/* Styles for when JavaScript is enabled */
+.js-enabled .art-objects-list {
+  width: 500vw;
 }
 
 .art-object-item {

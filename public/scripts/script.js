@@ -16,6 +16,8 @@ function loadMoreItems(direction) {
   }
 }
 
+document.documentElement.classList.add('js-enabled');
+
 function handleScroll() {
   const container = document.querySelector('.container');
   const scrollableHeight = container.scrollHeight;
