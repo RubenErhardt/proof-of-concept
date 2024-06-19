@@ -10,16 +10,28 @@ body::-webkit-scrollbar {
   width: 0px;
 }
 
+.container{
+  overflow: auto;
+}
+
+
+.nav-bar{
+  margin-right: 10px;
+  gap: 10px;
+}
+
 /* Grid styling */
 .art-objects-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Ensure images fit nicely */
-  grid-auto-rows: 10px; /* Set baseline row height */
   gap: 10px;
+  overflow: auto;
   padding: 10px;
+  width: 100vw;
   list-style-type: none;
   margin: 0 auto; /* Center container */
 }
+
 
 .art-object-item {
   position: relative;
@@ -137,9 +149,6 @@ ul {
   list-style-type: none;
 }
 
-ul li {
-  margin-right: 10px;
-}
 
 button {
   margin-right: 15px;

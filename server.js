@@ -26,8 +26,7 @@ const filteredData = data.data.map(item => ({
 app.get('/', function (request, response) {
     response.render('index', {
         data: filteredData
-    })
-    console.log(filteredData)   
+    }) 
 })
 
 app.listen(app.get('port'), function () {
