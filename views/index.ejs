@@ -4,12 +4,17 @@
     <% data.forEach(item => { %>
       <li class="art-object-item">
         <picture>
-          <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %>" width="<%= item.width %>" height="<%= item.height %>" loading="lazy" tabindex="0">
+          <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %>" loading="lazy" tabindex="0" width="200" height="200">
         </picture>
+        <div class="art-object-title">
+          <%= item.title %>
+        </div>
       </li>
     <% }) %>
   </ul>
 </div>
+
+
 
 <section class="button-search-section">
   <button>ALL</button>
@@ -21,6 +26,4 @@
     <input type="text" name="query" placeholder="SEARCH THE COLLECTION.....">
   </form>
 </section>
-
-  
 

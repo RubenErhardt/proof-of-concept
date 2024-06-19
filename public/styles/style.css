@@ -10,28 +10,36 @@ body::-webkit-scrollbar {
   width: 0px;
 }
 
-.container{
-  overflow: auto;
+body {
+  overflow-x: hidden;
 }
 
-
-.nav-bar{
+.nav-bar {
   margin-right: 10px;
   gap: 10px;
+}
+
+.nav-bar li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container {
+  overflow: auto;
+  max-width: 100%;
+  height: 100vh;
 }
 
 /* Grid styling */
 .art-objects-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Ensure images fit nicely */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
-  overflow: auto;
   padding: 10px;
-  width: 100vw;
+  width: 500vw; /* Temporarily set width larger to allow horizontal scrolling */
   list-style-type: none;
   margin: 0 auto; /* Center container */
 }
-
 
 .art-object-item {
   position: relative;
@@ -49,8 +57,62 @@ body::-webkit-scrollbar {
 
 .art-object-item img {
   width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  min-width: 100%; /* Zorg ervoor dat de breedte niet kleiner wordt dan 100% */
+  min-height: 100%; /* Zorg ervoor dat de hoogte niet kleiner wordt dan 100% */
+  object-fit: cover; /* Behoud aspect ratio en bedek het containergebied */
+}
+
+.art-object-item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: span var(--row-span, 1);
+}
+
+.art-object-item picture {
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.art-object-item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  z-index: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.art-object-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Verhoog de opaciteit voor meer contrast */
+  color: white;
+  padding: 10px;
+  z-index: 1;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  font-size: 1.2em; /* Verhoog de lettergrootte */
+  font-weight: bold; /* Maak de tekst vetgedrukt */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Voeg een text-shadow toe */
+}
+
+.art-object-item:hover {
+  opacity: 0.85;
+  cursor: pointer;
+  outline: #0056b3 solid 2px;
+}
+
+.art-object-item:hover .art-object-title {
+  opacity: 1;
 }
 
 /* Button and search section styling */
@@ -149,7 +211,6 @@ ul {
   list-style-type: none;
 }
 
-
 button {
   margin-right: 15px;
 }
@@ -159,9 +220,88 @@ button {
   height: auto;
 }
 
+.nav-bar {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-bar li {
+  margin-right: 20px; /* Ruimte tussen de items aan de rechterkant */
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar button {
+  background-color: yellow;
+  color: black;
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px; /* Ruimte tussen de knoppen aan de rechterkant */
+}
+
+.nav-bar li:last-child,
+.nav-bar button:last-child {
+  margin-right: 0; /* Geen margin aan de rechterkant voor het laatste item */
+}
+
+.nav-bar li span {
+  font-size: 0.8em;
+  display: block;
+}
+
+@media (max-width: 899px) {
+  .nav-bar li {
+    display: none; /* Verberg alle li-items in de nav-bar */
+  }
+
+  .nav-bar {
+    flex: 1; /* Geef de nav-bar sectie alle beschikbare ruimte om te centreren */
+    text-align: center; /* Center de inhoud binnen de nav-bar sectie */
+  }
+
+  .nav-bar button {
+    margin-right: 0; /* Geen margin aan de rechterkant voor knoppen in de nav-bar */
+  }
+}
+
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .art-objects-list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .art-objects-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
 @media (max-width: 600px) {
   .art-objects-list {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 699px) {
+  .button-search-section {
+    flex-direction: column; /* Plaats de items onder elkaar */
+    align-items: center; /* Centreer de items verticaal */
+    text-align: center; /* Centreer de tekst binnen de items */
+  }
+
+  .search-form {
+    margin-top: 10px; /* Voeg wat ruimte toe boven het zoekformulier */
+  }
+
+  .search-form input[type="text"] {
+    width: 100%; /* Neem de volledige breedte van de container in */
+    max-width: 300px; /* Beperk de maximale breedte van het zoekveld */
   }
 }
