@@ -1,11 +1,15 @@
+const maxItems = 200;
 const itemsToClone = 20;
 let totalClonedItemsVertical = 0;
-let totalClonedItemsHorizontal = 0;
+
+
 
 function loadMoreItems(direction) {
   const list = document.getElementById('art-objects-list');
   const items = list.querySelectorAll('li');
   const itemsCount = items.length;
+
+  if (totalClonedItemsVertical + itemsToClone > maxItems) return;
 
   for (let i = 0; i < itemsToClone; i++) {
     const item = items[i % itemsCount].cloneNode(true);
