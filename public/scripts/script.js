@@ -1,4 +1,4 @@
-const maxItems = 200;
+//const maxItems = 200;
 const itemsToClone = 20;
 let totalClonedItemsVertical = 0;
 
@@ -9,7 +9,7 @@ function loadMoreItems(direction) {
   const items = list.querySelectorAll('li');
   const itemsCount = items.length;
 
-  if (totalClonedItemsVertical + itemsToClone > maxItems) return;
+  //if (totalClonedItemsVertical + itemsToClone > maxItems) return;
 
   for (let i = 0; i < itemsToClone; i++) {
     const item = items[i % itemsCount].cloneNode(true);

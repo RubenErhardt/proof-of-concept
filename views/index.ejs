@@ -3,9 +3,9 @@
   <ul id="art-objects-list" class="art-objects-list">
     <% data.forEach(item => { %>
       <li class="art-object-item">
-        <picture>
-          <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %>" loading="lazy" tabindex="0" width="200" height="200">
-        </picture>
+          <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=avif" type="image/avif">
+          <source srcset="https://fdnd-agency.directus.app/assets/<%= item.image %>?format=webp" type="image/webp">         <!-- Fallback naar JPEG/PNG -->
+          <img src="https://fdnd-agency.directus.app/assets/<%= item.image %>" alt="<%= item.title %>" loading="lazy" width="200" height="200">
         <div class="art-object-title">
           <%= item.title %>
         </div>
